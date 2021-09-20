@@ -6,7 +6,7 @@ const members = [
         "desc" : "Practicing ayurvedic medicine for more than 4 decade"
       },
       {
-        "img": "team/003.jpg",
+        "img": "team",
         "name": "Surender Baweja",
         "job": "CEO",
         "desc" : "Something Something"
@@ -14,8 +14,8 @@ const members = [
     {
       "img": "team/002.jpg",
       "name": "Gulshan Baweja",
-      "job": "Sales Manager",
-      "desc" : "Manages Sale at Store"
+      "job": "CTO",
+      "desc" : "Something Something"
     },  
   ]
 export const Team = () => {
