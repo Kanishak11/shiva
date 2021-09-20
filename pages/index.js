@@ -1,4 +1,4 @@
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import LandingPage from '../components/LandingPage'
 import Products from '../components/Products'
 import { Team } from '../components/Team'
