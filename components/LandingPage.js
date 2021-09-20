@@ -139,12 +139,12 @@ export default function LandingPage() {
           </main>
         </div>
       </div>
-      <div className="pt-10 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <Image
+      <div className="pt-10 display-hide lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 sm:display- block lg:display-block">
+        <img
         width={1000}
         height={1000}
-          className="h-56  w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="http://arcadevoice.com/wp-content/uploads/2016/09/ayurvedic-products-for-skin.jpg"
+          className="h-56  w-full object-fill sm:h-72 md:h-96 lg:w-full lg:h-full"
+          src="assets/shiva.jpg"
           alt=""
         />
       </div>
