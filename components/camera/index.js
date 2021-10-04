@@ -1,6 +1,6 @@
 import React  from "react";
-import Webcam ,{WebcamCapture} from "react-webcam";
-import { useEffect ,useState } from "react";
+import Webcam from "react-webcam";
+import { useState } from "react";
 import Tesseract from 'tesseract.js';
  
 
@@ -10,7 +10,7 @@ const videoConstraints = {
     facingMode: { exact: "environment" }
   };
   
-  export default WebcamCapture = () => {
+  export default function WebcamCapture () {
     const [images , setImages] = useState([])
     const webcamRef = React.useRef(null);
 
@@ -22,11 +22,11 @@ const videoConstraints = {
                 'eng',
                 { logger: m => console.log(m) }
               ).then(({ data: { text } }) => {
-                (() => setImages([...images , text]))
+                (setImages(()=>{[...images,text]}))
                 console.log(text);
               })
         },
-        [webcamRef]
+        [webcamRef,images]
         );
         
         
