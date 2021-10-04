@@ -5,8 +5,8 @@ import Tesseract from 'tesseract.js';
  
 
 const videoConstraints = {
-    width: 1280,
-    height: 720,
+    width: 500,
+    height: 500,
     facingMode: { exact: "environment" }
   };
   
@@ -22,7 +22,7 @@ const videoConstraints = {
                 'eng',
                 { logger: m => console.log(m) }
               ).then(({ data: { text } }) => {
-                (setImages(()=>{[...images,text]}))
+                setImages([...images,text])
                 console.log(text);
               })
         },
