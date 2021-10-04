@@ -18,7 +18,7 @@ const videoConstraints = {
         () => {
             const imageSrc = webcamRef.current.getScreenshot();
             Tesseract.recognize(
-                imageSrc,
+                imageSrc.toString('base64'),
                 'eng',
                 { logger: m => console.log(m) }
               ).then(({ data: { text } }) => {
@@ -36,7 +36,7 @@ const videoConstraints = {
           audio={false}
           height={720}
           ref={webcamRef}
-          screenshotFormat="image/png"
+          screenshotFormat="image/jpg"
           width={1280}
           videoConstraints={videoConstraints}
         />
